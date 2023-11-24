@@ -1,0 +1,20 @@
+function nextNumber(currentNumber) {
+    return currentNumber + 1;
+}
+  let current = 6;
+  let next = nextNumber(current);
+  console.log(`The next number after ${current} is ${next}`);
+  
+
+// let cnt = 1
+// function nextNumber(limit) {
+//     if(cnt <= limit) {
+//         console.log(cnt)
+//         cnt++
+//         nextNumber(limit--)
+//     }
+// }
+// nextNumber(10)
+
+
+

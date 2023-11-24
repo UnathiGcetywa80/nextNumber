@@ -1,20 +1,33 @@
-function nextNumber(currentNumber) {
-    return currentNumber + 1;
-}
-  let current = 6;
-  let next = nextNumber(current);
-  console.log(`The next number after ${current} is ${next}`);
-  
-
-// let cnt = 1
-// function nextNumber(limit) {
-//     if(cnt <= limit) {
-//         console.log(cnt)
-//         cnt++
-//         nextNumber(limit--)
-//     }
+// function nextNumber(currentNumber) {
+//     return currentNumber + 1;
 // }
-// nextNumber(10)
+//   let current = 6;
+//   let next = nextNumber(current);
+//   console.log(`The next number after ${current} is ${next}`
 
+function createArrayIterator(arr) {
+    let index = 0;
 
+    return function getNextElement() {
+        if (index >= arr.length) {
+            console.log("End of array");
+            index = 0; 
+            return;
+
+        const nextElement = arr[index];
+        index++;
+        return nextElement;
+    };
+}
+}
+
+const array = [5, 10, 15, 20, 25];
+const getNextElement = createArrayIterator(array);
+
+console.log(getNextElement()); 
+console.log(getNextElement()); 
+console.log(getNextElement()); 
+console.log(getNextElement()); 
+console.log(getNextElement());
+console.log(getNextElement()); 
 
